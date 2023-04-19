@@ -1,5 +1,6 @@
 package service;
 
+import model.Employee;
 import org.springframework.stereotype.Service;
 
 @Service
