@@ -3,15 +3,14 @@ package model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Employee {
-        @JsonProperty("firstName")
+    @JsonProperty("firstName")
     private final String name;
-       @JsonProperty("lastName")
-        private final String surname;
-       private int department;
-       private int salary;
+    @JsonProperty("lastName")
+    private final String surname;
+    private int department;
+    private int salary;
 
-
-        public Employee(String name,
+    public Employee(String name,
                         String surname,
                         int department,
                         int salary) {
@@ -20,11 +19,9 @@ public class Employee {
             this.department = department;
             this.salary = salary;
         }
-
         public String getName() {
             return this.name;
         }
-
         public String getSurname() {
             return this.surname;
         }
@@ -44,16 +41,16 @@ public class Employee {
         this.salary = salary;
     }
 
-        @Override
-        public boolean equals (Object o) {
-            if (this == o) {
-                return true;
+    @Override
+    public boolean equals (Object o) {
+        if (this == o) {
+            return true;
         }
-            if (o == null || getClass() != o.getClass()){
-                return false;
-            }
-            Employee employee = (Employee)  o;
-            return name.equals(employee.name) && surname.equals(employee.surname);
+        if (o == null || getClass() != o.getClass()){
+            return false;
+        }
+        Employee employee = (Employee)  o;
+        return name.equals(employee.name) && surname.equals(employee.surname);
         }
         @Override
     public String toString(){
